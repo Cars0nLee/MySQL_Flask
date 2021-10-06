@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Read</title>
+</head>
+<style>
+    table {
+        text-align: center;
+        margin: auto;
+        margin-top: 100px;
+    }
+</style>
+<body>
+    <table border="3" width="500">
+        <tr>
+            <th>id</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+        </tr>
+        <tr>
+        {% for i in nameshtml %}
+            <td>
+                <h3>{{i.id}}</h3>
+            </td>
+            <td>
+                <h3>{{i.first_name}}</h3>
+            </td>
+            <td>
+                <h3>{{i.last_name}}</h3>
+            </td>
+            <td>
+                <h3>{{i.email}}</h3>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="/add">Add New User</a>
+</body>
+</html>
